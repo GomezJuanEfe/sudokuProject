@@ -32,3 +32,18 @@
 .sudoku .border_bottom {
   border-bottom: 10px solid #F2F2F2;
 }
+
+.sudoku-container {
+  width: 100%;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+}
+.sudoku-container .row {
+  display: flex;
+  flex-flow: nowrap row;
+}
+.sudoku-container input {
+  width: 30px;
+  height: 30px;
+}

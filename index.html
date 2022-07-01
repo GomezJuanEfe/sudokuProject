@@ -11,133 +11,359 @@
 </head>
 
 <body>
-  <table class="sudoku">
-    <tbody>
-      <tr class="1">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
 
-      <tr class="2">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
+  <div class="sudoku-container">
+    <div class="row">
+      <div data-bl="1">
+        <table>
+          <tr>
+            <td>
+              <input data-id="A1" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B1" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C1" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="A2" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B2" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C2" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="A3" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B3" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C3" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-      <tr class="3 border_bottom">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
+      <div data-bl="2">
+        <table>
+          <tr>
+            <td>
+              <input data-id="D1" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E1" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F1" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="D2" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E2" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F2" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="D3" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E3" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F3" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-      <tr class="4">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
+      <div data-bl="3">
+        <table>
+          <tr>
+            <td>
+              <input data-id="G1" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H1" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I1" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="G2" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H2" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I2" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="G3" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H3" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I3" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
+    <div class="row">
+      <div data-bl="4">
+        <table>
+          <tr>
+            <td>
+              <input data-id="A4" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B4" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C4" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="A5" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B5" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C5" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="A6" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B6" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C6" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
+      <div data-bl="5">
+        <table>
+          <tr>
+            <td>
+              <input data-id="D4" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E4" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F4" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="D5" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E5" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F5" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="D6" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E6" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F6" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-      <tr class="5">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
+      <div data-bl="6">
+        <table>
+          <tr>
+            <td>
+              <input data-id="G4" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H4" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I4" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="G5" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H5" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I5" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="G6" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H6" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I6" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
+    <div class="row">
+      <div data-bl="7">
+        <table>
+          <tr>
+            <td>
+              <input data-id="A7" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B7" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C7" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="A8" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B8" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C8" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="A9" type="text" value="">
+            </td>
+            <td>
+              <input data-id="B9" type="text" value="">
+            </td>
+            <td>
+              <input data-id="C9" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-      <tr class="6 border_bottom">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
+      <div data-bl="8">
+        <table>
+          <tr>
+            <td>
+              <input data-id="D7" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E7" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F7" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="D8" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E8" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F8" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="D9" type="text" value="">
+            </td>
+            <td>
+              <input data-id="E9" type="text" value="">
+            </td>
+            <td>
+              <input data-id="F9" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
 
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
+      <div data-bl="9">
+        <table>
+          <tr>
+            <td>
+              <input data-id="G7" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H7" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I7" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="G8" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H8" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I8" type="text" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input data-id="G9" type="text" value="">
+            </td>
+            <td>
+              <input data-id="H9" type="text" value="">
+            </td>
+            <td>
+              <input data-id="I9" type="text" value="">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
-
-      <tr class="7">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
-
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
-
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
-
-      <tr class="8">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
-
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
-
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
-
-      <tr class="9">
-        <td class="1"><input type="text" maxlength="1" /></td>
-        <td class="2"><input type="text" maxlength="1" /></td>
-
-        <td class="3 border_right"><input type="text" maxlength="1" /></td>
-        <td class="4"><input type="text" maxlength="1" /></td>
-        <td class="5"><input type="text" maxlength="1" /></td>
-
-        <td class="6 border_right"><input type="text" maxlength="1" /></td>
-        <td class="7"><input type="text" maxlength="1" /></td>
-        <td class="8"><input type="text" maxlength="1" /></td>
-        <td class="9"><input type="text" maxlength="1" /></td>
-      </tr>
-    </tbody>
-  </table>
-
+  </div>
 
   <button id="answer">Chaeck the Answer</button>
-
-
 
   <!-- The tag below is a external JavaScript file, please write all the JS code there -->
   <script src="./index.js"></script>
