@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,138 @@
   <title>Sudoku Project</title>
   <script src="./utils/jquery-3.6.0.js"></script>
 </head>
+
 <body>
+  <table class="sudoku">
+    <tbody>
+      <tr class="1">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
 
-  <h1>Hello, World!</h1>
+      <tr class="2">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
 
-<!-- The tag below is a external JavaScript file, please write all the JS code there -->
-<script src="./index.js"></script> 
+      <tr class="3 border_bottom">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
+
+      <tr class="4">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
+
+      <tr class="5">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
+
+      <tr class="6 border_bottom">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
+
+      <tr class="7">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
+
+      <tr class="8">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
+
+      <tr class="9">
+        <td class="1"><input type="text" maxlength="1" /></td>
+        <td class="2"><input type="text" maxlength="1" /></td>
+
+        <td class="3 border_right"><input type="text" maxlength="1" /></td>
+        <td class="4"><input type="text" maxlength="1" /></td>
+        <td class="5"><input type="text" maxlength="1" /></td>
+
+        <td class="6 border_right"><input type="text" maxlength="1" /></td>
+        <td class="7"><input type="text" maxlength="1" /></td>
+        <td class="8"><input type="text" maxlength="1" /></td>
+        <td class="9"><input type="text" maxlength="1" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <button id="answer">Chaeck the Answer</button>
+
+
+
+  <!-- The tag below is a external JavaScript file, please write all the JS code there -->
+  <script src="./index.js"></script>
 </body>
+
 </html>
