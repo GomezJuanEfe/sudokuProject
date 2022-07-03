@@ -22,6 +22,17 @@ function findBlock(inp) {
   return res
 }
 
+function restriction() {
+  var e = event || window.event;  // get event object
+  var key = e.keyCode || e.which; // get key cross-browser
+
+  if (key <= 48 || key > 57) { //if it is not a number ascii code
+      //Prevent default action, which is inserting character
+      if (e.preventDefault) e.preventDefault(); //normal browsers
+      e.returnValue = false; //IE
+  }
+}
+
 /* Compare the values of a column or a row */
 
 function compareRowsColumns(elem) {
@@ -34,6 +45,7 @@ function compareRowsColumns(elem) {
       $(elem[i][0]).css('background-color', 'yellow');
       $((findRowsAndColums(currentId))[0]).css('background-color', 'yellow');
     }
+    // if ($(elem[i][0]).value == ''){} ***I need to find a way to add a class to the empty block or something similar in order to find if there are any empty blocks when the user clicks the button***
   }
 }
 
@@ -67,14 +79,3 @@ $('div.sudoku-container')
     compareRowsColumns(rowValues);
     compareRowsColumns(columnValues);
   })
-
-  function restriction() {
-    var e = event || window.event;  // get event object
-    var key = e.keyCode || e.which; // get key cross-browser
-  
-    if (key <= 48 || key > 57) { //if it is not a number ascii code
-        //Prevent default action, which is inserting character
-        if (e.preventDefault) e.preventDefault(); //normal browsers
-        e.returnValue = false; //IE
-    }
-  }
