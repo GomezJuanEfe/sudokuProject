@@ -13,24 +13,39 @@ function findRowsAndColums(inp) {
 /* Return all the HTML elements of an specific sudoku-block index */
 function findBlock(inp) {
   let num = inp;
-  let res = [];
+  let res;
   $('div .row > div').each(function (index, element) {
     if ($(element).data('bl') == num) {
-      res.push($(element).find('input'));
+      res = $(element).find('input');
     }
   });
   return res
 }
 
-/* Compare function */
+/* Compare the values of a column or a row */
 
-function compareRowsColumns() {
-  for (let i = 0; i < rowValues.length; i++) {
-    if (rowValues[i][0].value == currentValue && $(rowValues[i][0]).data('id') !== currentId && rowValues[i][0].value !== '') {
-      $(rowValues[i][0]).css('background-color', 'yellow');
+function compareRowsColumns(elem) {
+  $(elem).each(function(index){
+    elem[index].css('background-color', 'white');
+  })
+ 
+  for (let i = 0; i < elem.length; i++) {
+    if (elem[i][0].value == currentValue && $(elem[i][0]).data('id') !== currentId && elem[i][0].value !== '') {
+      $(elem[i][0]).css('background-color', 'yellow');
       $((findRowsAndColums(currentId))[0]).css('background-color', 'yellow');
     }
   }
+}
+
+/* Compare the values of a column or a row */
+
+function compareBlock(elem) {
+  $(elem).each(function(index){
+    if ($(elem).value == currentValue && $(elem).data('id') !== currentId && elem.value !== '') {
+      $(elem).css('background-color', 'yellow');
+      $((findRowsAndColums(currentId))).css('background-color', 'yellow');
+    }
+  })
 }
 
 /* Return the actual position info needed */
@@ -41,16 +56,16 @@ $('div.sudoku-container')
   .on('blur', 'div[data-bl]', function (event) {
     currentBl = $(event.currentTarget).data('bl');
     blockValues = findBlock(currentBl);
-    console.log(blockValues);
+    compareBlock(blockValues);
+    // console.log(blockValues);
   })
   .on('blur', 'input', function (event) {
     currentId = $(event.target).data('id');
     currentValue = event.target.value;
     rowValues = findRowsAndColums(currentId[1]);
     columnValues = findRowsAndColums(currentId[0]);
-    console.log(rowValues);
-    console.log(columnValues);
-    compareRowsColumns();
+    compareRowsColumns(rowValues);
+    compareRowsColumns(columnValues);
   })
 
 
