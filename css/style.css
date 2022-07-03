@@ -67,8 +67,31 @@ input {
   border: 0;
   font-size: 20pt;
   text-align: center;
-  color: #888888;
+  color: #7DA064;
+  font-family: 'Gloria Hallelujah', cursive;
 }
+
+.correct {
+  background-color: #D6EFEA;
+}
+.wrong {
+  color: #FF8181;
+  background: #FFDEDE;
+}
+
+.see-answer {
+  color: #D94A4A;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+[readonly] {
+  color:#555555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 .sudoku-container {
   width: 100%;
@@ -89,7 +112,7 @@ input {
   align-items: center;
 }
 
-.input{
+.pending{
   color: #7DA064;
   font-family: 'Gloria Hallelujah', cursive;
 }
