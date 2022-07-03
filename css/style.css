@@ -71,6 +71,10 @@ input {
   font-family: 'Gloria Hallelujah', cursive;
 }
 
+input:focus{
+  background-color: #FFFBE0;
+}
+
 .correct {
   background-color: #D6EFEA;
 }
