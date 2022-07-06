@@ -5,10 +5,17 @@ $('#answer').click(function() {
       $(element).removeClass('wrong');
     }
   });
-  $('.wrong').on('change', function(event) {
-    $(event.target).removeClass('wrong');
-  });
 });
+
+$('input').on('click', function(event) {
+  $('.wrong').removeClass('wrong');
+});
+
+$('.sudoku-container')
+  .on('keypress' ,'input', function(event) {
+    restriction();
+  });
+
 
 
 // MODAL START
