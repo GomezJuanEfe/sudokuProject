@@ -1,71 +1,52 @@
-/* Return the HTML elements of an specific sudoku index */
-function findRowsAndColums(inp) {
-  let ind = inp;
-  let res = [];
-  $('input').each(function(index, element) {
-    if ($(element).data('id').includes(ind)) {
-      res.push($(element));
+$('#answer').click(function() {
+  checkSudoku();
+  $('input').each(function (index, element) {
+    if ($(element).attr('readonly')) {
+      $(element).removeClass('wrong');
     }
   });
-  return res
-}
+});
 
-/* Return all the HTML elements of an specific sudoku-block index */
-function findBlock(inp) {
-  let num = inp;
-  let res;
-  $('div .row > div').each(function (index, element) {
-    if ($(element).data('bl') == num) {
-      res = $(element).find('input');
+$('input').on('click', function(event) {
+  $('.wrong').removeClass('wrong');
+});
+
+$('.sudoku-container')
+  .on('keypress' ,'input', function(event) {
+    restriction();
+  });
+
+
+
+// MODAL START
+$(function () {
+  let open = $('.modal-open'),
+    close = $('.modal-close'),
+    container = $('.modal-container');
+
+  //Clicking open modal button opens the modal.
+  open.on('click', function () {
+    container.addClass('active');
+    return false;
+  });
+
+  //Clicking "x" closes the modal.
+  close.on('click', function () {
+    container.removeClass('active');
+  });
+
+  //Clicking on the translucent background closes the modal.
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.modal-body').length) {
+      container.removeClass('active');
     }
   });
-  return res
-}
 
-/* Compare the values of a column or a row */
-
-function compareRowsColumns(elem) {
-  $(elem).each(function(index){
-    elem[index].css('background-color', 'white');
-  })
- 
-  for (let i = 0; i < elem.length; i++) {
-    if (elem[i][0].value == currentValue && $(elem[i][0]).data('id') !== currentId && elem[i][0].value !== '') {
-      $(elem[i][0]).css('background-color', 'yellow');
-      $((findRowsAndColums(currentId))[0]).css('background-color', 'yellow');
+  //Clicking on try again button closes the modal.
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('try-again').length) {
+      container.removeClass('active');
     }
-  }
-}
-
-/* Compare the values of a column or a row */
-
-function compareBlock(elem) {
-  $(elem).each(function(index){
-    if ($(elem).value == currentValue && $(elem).data('id') !== currentId && elem.value !== '') {
-      $(elem).css('background-color', 'yellow');
-      $((findRowsAndColums(currentId))).css('background-color', 'yellow');
-    }
-  })
-}
-
-/* Return the actual position info needed */
-
-let currentId, currentValue, currentBl, rowValues, columnValues, blockValues;
-
-$('div.sudoku-container')
-  .on('blur', 'div[data-bl]', function (event) {
-    currentBl = $(event.currentTarget).data('bl');
-    blockValues = findBlock(currentBl);
-    compareBlock(blockValues);
-    // console.log(blockValues);
-  })
-  .on('blur', 'input', function (event) {
-    currentId = $(event.target).data('id');
-    currentValue = event.target.value;
-    rowValues = findRowsAndColums(currentId[1]);
-    columnValues = findRowsAndColums(currentId[0]);
-    compareRowsColumns(rowValues);
-    compareRowsColumns(columnValues);
-  })
-
-
+  });
+});
+// MODAL END
