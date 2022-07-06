@@ -1,7 +1,15 @@
-$('div.sudoku-container')
-  .on('blur', 'input', function (event) {
-    checkSudoku();
-  })
+$('#answer').click(function() {
+  checkSudoku();
+  $('input').each(function (index, element) {
+    if ($(element).attr('readonly')) {
+      $(element).removeClass('wrong');
+    }
+  });
+  $('.wrong').on('change', function(event) {
+    $(event.target).removeClass('wrong');
+  });
+});
+
 
 // MODAL START
 $(function () {

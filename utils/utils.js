@@ -1,3 +1,5 @@
+
+
 /* Return the HTML elements of an specific sudoku index */
 function findRowsAndColums(inp) {
   let ind = inp;
@@ -34,8 +36,7 @@ function findRepeatedColRow(arr) {
   let repeated = num.filter((item, index) => index !== num.indexOf(item));
   arr.forEach(e => {
     if (repeated.includes(e[0].value)) {
-      /* CHANGE THE CLASS HERE */
-      $(e[0]).css('background-color', 'yellow');
+      $(e[0]).addClass('wrong');
     }
   });
 }
@@ -52,8 +53,7 @@ function findRepeatedBlock(arr) {
   let repeated = num.filter((item, index) => index !== num.indexOf(item));
   $(arr).each(function (index, element) {
     if (repeated.includes(element.value)) {
-
-      $(element).css('background-color', 'yellow');
+      $(element).addClass('wrong');
     }
   })
 }
@@ -61,8 +61,7 @@ function findRepeatedBlock(arr) {
 /* Execute the findRepeatedColRow function in all the Sudoku grid */
 
 function checkSudoku() {
-  /* CHANGE THE DEFAULT BACKGROUND HERE */
-  $('input').css('background-color', 'white');
+  $('input').removeClass('wrong');
   const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
   for (let i = 0; i < rows.length; i++) {
     findRepeatedColRow(findRowsAndColums(i + 1));
