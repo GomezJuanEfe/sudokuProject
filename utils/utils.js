@@ -80,3 +80,25 @@ function restriction() {
     e.returnValue = false; //IE
   }
 }
+
+/* Validate if all the inputs are filled */
+function anyEmpty() {
+  let res = false;
+  $('input').each(function (index, element) {
+    if ($(element).val() == '') {
+      res = true;
+    }
+  });
+  return res
+}
+
+/* Validate if none of the inputs have the class .wrong */
+function anyWrongClass() {
+  let res = false;
+  $('input').each(function (index, element) {
+    if ($(element).hasClass('wrong')) {
+      res = true;
+    }
+  });
+  return res
+}
