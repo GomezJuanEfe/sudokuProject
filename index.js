@@ -54,3 +54,12 @@ $(function () {
   });
 });
 // MODAL END
+
+
+/* Find all the .wrong class */
+
+console.log($('input'));
+$('input').each(function(index, element){
+    console.log($(element).hasClass("a1"));
+  
+})
