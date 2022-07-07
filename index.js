@@ -16,7 +16,11 @@ $('.sudoku-container')
     restriction();
   });
 
+/* Validate if all the inputs are filled */
 
+/* Validate if none of the inputs have the class .wrong */
+
+/* If the two validation above are true then show the modal box */
 
 // MODAL START
 $(function () {
